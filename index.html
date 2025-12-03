@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwindCSS setup -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2c4593a4a7.js" crossorigin="anonymous"></script>
+
+    <!-- for video popup -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <!-- swiper  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Naxite</title>
+
+</head>
+<body class="syne-font">
+
+    <div class="bg-[url('./assets/bannerBG.png')] bg-cover bg-center bg-no-repeat">
+        <!-- header section -->
+        <header>
+            <div>    
+                <div class="flex justify-center items-center gap-[150px] px-10">
+                    <!-- logon + navlinks -->
+                    <div class="flex gap-[50px]">
+                        <div>
+                            <a href="#">
+                                <img class="w-[174px] h-[38px] mt-8" src="./assets/Mainlogo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div>
+                            <ul class="flex gap-8">
+                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Home</a></li>
+                                <li class="relative group"><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] group-hover:text-[#2AB8DB] flex justify-center items-center gap-1" href="#">Pages <i class="text-[#77777780] lg:text-[#77777780] group-hover:text-[#2AB8DB] fa-solid fa-angle-down"></i></a>
+                                    <ul class="absolute top-full left-0 bg-[#FFFFFF] hidden lg:group-hover:block shadow-lg border-2 border-[#2AB8DB] rounded-[10px] text-left w-[220px]" > 
+                                        <li><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] border-b border-[#EAEAEA] px-4">Page 1</a></li> 
+                                        <li><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] border-b border-[#EAEAEA] px-4">Page 2</a></li> 
+                                        <li><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] px-4">Page 3</a></li> 
+                                    </ul> 
+                                </li>
+                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Services</a></li>
+                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Projects</a></li>
+                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Contact</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+    
+                    <!-- no. and CTA -->
+                    <div class="flex gap-[59px] items-center">
+                        <div>
+                            <h3 class="font-[600] text-[16px] leading-[35px] text-[#FFFFFF]"><span class="text-[#FFA8A7]">Call Us:</span> (+55) -66 99 88</h3>
+                        </div>
+                        <div>
+                            <button class="group cursor-pointer hidden lg:flex font-bold items-center gap-2 border border-[#1F242E1A] px-6 py-3 rounded-full bg-[#2AB8DB] text-white hover:bg-transparent hover:border hover:border-[#2AB8DB]">
+                                <i class="fa-regular fa-message text-white group-hover:text-white"></i>
+                                Let's Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-full text-[#FFFFFF1A]">
+            </div>
+        </header>
+        <!-- banner section -->
+        <div class="swiper my-director-slider">
+            <div class="swiper-wrapper">
+                <!-- slide 1 -->
+                <div class="swiper-slide">
+                    <div class="container pb-[99px] flex justify-center items-center relative">
+                        <div class="w-[60%]">
+                            <div class="text-[#FFFFFF] ">
+                                <h2 class="text-[62px] font-[700] leading-[70px]">Perfect Place for <br> your Of IT Service & <br> IT Solutions.</h2>
+                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                            </div>
+                            <div class="flex justify-center items-center lg:block">
+                                <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+        
+                        <div class="w-[40%]">
+                            <div class="relative mt-40">
+                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                            </div>
+                            <!-- video play button -->
+                            <div class="hidden lg:block absolute top-130 right-5">
+                                <a 
+                                    href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
+                                    class="video-popup relative cursor-pointer"
+                                >
+                                    <img class="w-15 h-15" src="./assets/bluePlayCircle.png" alt="pink_play_btn">
+                                    <div class="ml-6 -mt-10">
+                                        <i class="fa-solid fa-play text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide 2 -->
+                <div class="swiper-slide">
+                    <div class="container pb-[99px] flex justify-center items-center relative">
+                        <div class="w-[60%]">
+                            <div class="text-[#FFFFFF] ">
+                                <h2 class="text-[62px] font-[700] leading-[70px]">Best Of IT Service & IT Solutions.</h2>
+                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                            </div>
+                            <div class="flex justify-center items-center lg:block">
+                                <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+        
+                        <div class="w-[40%]">
+                            <div class="relative mt-40">
+                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                            </div>
+                            <!-- video play button -->
+                            <div class="hidden lg:block absolute absolute top-130 right-5">
+                                <a 
+                                    href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
+                                    class="video-popup relative cursor-pointer"
+                                >
+                                    <img class="w-15 h-15" src="./assets/bluePlayCircle.png" alt="pink_play_btn">
+                                    <div class="ml-6 -mt-10">
+                                        <i class="fa-solid fa-play text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide 3 -->
+                <div class="swiper-slide">
+                    <div class="container pb-[99px] flex justify-center items-center relative">
+                        <div class="w-[60%]">
+                            <div class="text-[#FFFFFF] ">
+                                <h2 class="text-[62px] font-[700] leading-[70px]">Perfect Place for <br> your Of IT Service & <br> IT Solutions.</h2>
+                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                            </div>
+                            <div class="flex justify-center items-center lg:block">
+                                <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+        
+                        <div class="w-[40%]">
+                            <div class="relative mt-40">
+                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                            </div>
+                            <!-- video play button -->
+                            <div class="hidden lg:block absolute absolute top-130 right-5">
+                                <a 
+                                    href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
+                                    class="video-popup relative cursor-pointer"
+                                >
+                                    <img class="w-15 h-15" src="./assets/bluePlayCircle.png" alt="pink_play_btn">
+                                    <div class="ml-6 -mt-10">
+                                        <i class="fa-solid fa-play text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide 4 -->
+                <div class="swiper-slide">
+                    <div class="container pb-[99px] flex justify-center items-center relative">
+                        <div class="w-[60%]">
+                            <div class="text-[#FFFFFF] ">
+                                <h2 class="text-[62px] font-[700] leading-[70px]">Best Of IT Service & IT Solutions.</h2>
+                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                            </div>
+                            <div class="flex justify-center items-center lg:block">
+                                <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+        
+                        <div class="w-[40%]">
+                            <div class="relative mt-40">
+                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                            </div>
+                            <!-- video play button -->
+                            <div class="hidden lg:block absolute absolute top-130 right-5">
+                                <a 
+                                    href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
+                                    class="video-popup relative cursor-pointer"
+                                >
+                                    <img class="w-15 h-15" src="./assets/bluePlayCircle.png" alt="pink_play_btn">
+                                    <div class="ml-6 -mt-10">
+                                        <i class="fa-solid fa-play text-white"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination dots -->
+            <div class="swiper-pagination mb-[50px] -ml-155"></div>
+        </div>
+    </div>
+
+    <main class="bg-[#F7F7F7]">
+       <!-- about us section -->
+        <div class="pt-[106px]">
+            <div class="container flex items-start gap-[30px]">
+                <!-- left side -->
+                <div class="w-[50%]">
+                    <div>
+                        <h2 class="font-[700] text-[32px] leading-[48px] text-[#1F242E] mb-[11px]">We Are About our Company Engineering IT services.</h2>
+                        <p class="font-[400] text-[16px] leading-[30px] text-[#777777]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. Inside tomopi condimentum dictum odio, sed faucibus enim ornare a. Nunc feugiat extem usto, vestibulum imperdiet ligula mollis vel.</p>
+                    </div>
+                    <div class="mt-8 flex">
+                        <div>
+                            <img src="./assets/blueimgDots.png" alt="blueimgDots">
+                            <img class="w-[260px] h-[357px] object-cover -mt-90 ml-[20px]" src="./assets/aboutus1.jpg" alt="aboutus1">
+                        </div>
+                        <div class="relative">
+                            <img src="./assets/pinkimgDots.png" alt="blueimgDots">
+                            <img class="w-[240px] h-[357px] object-cover absolute bottom-5 left-[15px] " src="./assets/aboutus2.jpg" alt="aboutus2">
+                        </div>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class="w-[50%]">
+                    <div class="bg-[url('./assets/aboutusBG.png')] w-[512px] h-[512px]">
+                        <div class="flex flex-col lg:flex-row gap-[30px] justify-center -ml-30">
+                            <!-- 1st service -->
+                            <div>
+                                <div class="w-[25%] mt-40 group w-[270px] h-[286px] bg-[#FFFFFF] flex flex-col justify-start items-center rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#2AB8DB]">
+                                    <div class="group-hover:hidden block w-[100px] h-[110px] rounded-[10px] flex justify-center items-start transition-all duration-300 mt-[48px]">
+                                        <img class="w-[50px] h-[50px] transition-all duration-300
+                                                    group-hover:filter 
+                                                    group-hover:invert-[100%] 
+                                                    group-hover:sepia-[6%] 
+                                                    group-hover:saturate-[2275%] 
+                                                    group-hover:hue-rotate-[151deg] 
+                                                    group-hover:brightness-[92%] 
+                                                    group-hover:contrast-[90%]"
+                                            src="./assets/serviceHovered1.png" 
+                                            alt="Consultancy" />
+                                    </div>
+                                    <div class="hidden group-hover:block w-[100px] h-[110px] rounded-[10px] flex justify-center items-center transition-all duration-300 mt-[20px]">
+                                        <img class="w-[50px] h-[50px] transition-all duration-300 mt-7 ml-6"
+                                            src="./assets/Consultancy.png" 
+                                            alt="Consultancy" />
+                                    </div>
+                                    
+                                    <!-- arrows -->
+                                    <img class="group-hover:hidden block -mt-[40px]" src="./assets/arrowLine.png" alt="arrowLine">
+                                    <img class="hidden group-hover:block -mt-[10px]" src="./assets/hoveredArrowLine.png" alt="hoveredArrowLine">
+                    
+                                    <h2 class="text-center text-[#1F242E] group-hover:text-[#FFFFFF] font-[700] text-[24px] leading-[34px] mt-[24px]">IT Consultancy</h2>
+                                    <h4 class="text-center open-sans-font px-[30px] font-[400] text-[16px] leading-[30px] text-[#777777] group-hover:text-[#FFFFFF]">Consectetur adipiscing elit.</h4>
+                                    
+                                </div>
+                                <!-- tags -->
+                                <div class="mt-[50px] flex flex-col gap-[10px]" >
+                                    <div>
+                                        <button class="cursor-pointer font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF]">UX/UI Design</button>
+                                        <button class="cursor-pointer font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF]">Photography</button>
+                                    </div>
+                                    <button class="cursor-pointer w-[160px] w-font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF]">Graphics & Design</button>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="w-[25%]">
+                                <!-- 2nd service -->
+                                <div class=" group w-[270px] h-[286px] bg-[#FFFFFF] flex flex-col justify-start items-center rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#2AB8DB]">
+                                    <div class="group-hover:hidden block w-[100px] h-[110px] rounded-[10px] flex justify-center items-start transition-all duration-300 mt-[48px]">
+                                        <img class="w-[50px] h-[50px] transition-all duration-300
+                                                    group-hover:filter 
+                                                    group-hover:invert-[100%] 
+                                                    group-hover:sepia-[6%] 
+                                                    group-hover:saturate-[2275%] 
+                                                    group-hover:hue-rotate-[151deg] 
+                                                    group-hover:brightness-[92%] 
+                                                    group-hover:contrast-[90%]"
+                                            src="./assets/Data&Analytics.png" 
+                                            alt="Data&Analytics" />
+                                    </div>
+                                    <div class="hidden group-hover:block w-[100px] h-[110px] rounded-[10px] flex justify-center items-center transition-all duration-300 mt-[20px]">
+                                        <img class="w-[50px] h-[50px] transition-all duration-300 mt-7 ml-6"
+                                            src="./assets/serviceUnhovered2.png" 
+                                            alt="Data&Analytics" />
+                                    </div>
+                                    
+                                    <!-- arrows -->
+                                    <img class="group-hover:hidden block -mt-[40px]" src="./assets/arrowLine.png" alt="arrowLine">
+                                    <img class="hidden group-hover:block -mt-[10px]" src="./assets/hoveredArrowLine.png" alt="hoveredArrowLine">
+                    
+                                    <h2 class="text-center text-[#1F242E] group-hover:text-[#FFFFFF] font-[700] text-[24px] leading-[34px] mt-[24px]">Data & Analytics</h2>
+                                    <h4 class="text-center open-sans-font px-[30px] font-[400] text-[16px] leading-[30px] text-[#777777] group-hover:text-[#FFFFFF]">Consectetur adipiscing elit.</h4>
+                                </div>
+    
+                                <!-- 3rd service -->
+                                <div class="mt-[40px] group w-[270px] h-[286px] bg-[#FFFFFF] flex flex-col justify-start items-center rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#2AB8DB]">
+                                    <div class="group-hover:hidden block w-[100px] h-[110px] rounded-[10px] flex justify-center items-start transition-all duration-300 mt-[48px]">
+                                        <img class="w-[50px] h-[50px] transition-all duration-300
+                                                    group-hover:filter 
+                                                    group-hover:invert-[100%] 
+                                                    group-hover:sepia-[6%] 
+                                                    group-hover:saturate-[2275%] 
+                                                    group-hover:hue-rotate-[151deg] 
+                                                    group-hover:brightness-[92%] 
+                                                    group-hover:contrast-[90%]"
+                                            src="./assets/serviceHovered3.png" 
+                                            alt="CyberSecurity" />
+                                    </div>
+                                    <div class="hidden group-hover:block w-[100px] h-[110px] rounded-[10px] flex justify-center items-center transition-all duration-300 mt-[20px]">
+                                        <img class="w-[50px] h-[50px] transition-all duration-300 mt-7 ml-6"
+                                            src="./assets/CyberSecurity.png" 
+                                            alt="CyberSecurity" />
+                                    </div>
+                                    
+                                    <!-- arrows -->
+                                    <img class="group-hover:hidden block -mt-[40px]" src="./assets/arrowLine.png" alt="arrowLine">
+                                    <img class="hidden group-hover:block -mt-[10px]" src="./assets/hoveredArrowLine.png" alt="hoveredArrowLine">
+                    
+                                    <h2 class="text-center text-[#1F242E] group-hover:text-[#FFFFFF] font-[700] text-[24px] leading-[34px] mt-[24px]">Cyber Security</h2>
+                                    <h4 class="text-center open-sans-font px-[30px] font-[400] text-[16px] leading-[30px] text-[#777777] group-hover:text-[#FFFFFF]">Consectetur adipiscing elit.</h4>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- team members section -->
+        <div class="pt-[104px]">
+            <div class="container">
+                <h3 class="font-[700] text-[52px] text-center text-[#1F242E]">Team Member</h3>
+                <p class="font-[400] text-[16px] leading-[30px] text-center text-[#777777] px-4 lg:px-0">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <br class="hidden lg:block"> Velit officia consequat duis enim velit mollit. lorem ipsum</p>
+                
+                <div class="px-4 lg:px-0 mt-[43px] grid grid-cols-2 grid-rows-1 gap-5 lg:flex lg:flex-row lg:gap-[30px] justify-center items-center">
+                    <div class="cursor-pointer bg-[#FFFFFF] rounded-[10px] text-center group transition-all duration-300">
+                        <img class="w-[270px] h-[270px] rounded-[10px]" src="./assets/bannerH2.png" alt="teammate1">
+
+                        <div>
+                            <h2 class="font-[600] text-[14px] leading-[30px] text-[#2AB8DB] text-center mt-[20px]">IT Marketing</h2>
+                            <h4 class="font-[700] text-[20px] leading-100% text-[#1F242E] mt-[4px]">Yellow Piran Makuram</h4>
+                        </div>
+
+                        <hr class="mt-[26px] border-2 border-[#1F242E1A] w-[90px] mx-[90px] mb-[5px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <ul class="flex justify-center items-center gap-5 mb-[17px]">
+                            <li class="group-hover:text-[#2AB8DB]">Fb.</li>
+                            <li>Ln.</li>
+                            <li>Dr.</li>
+                            <li>Be.</li>
+                        </ul>
+                    </div>
+                    <div class="cursor-pointer bg-[#FFFFFF] rounded-[10px] text-center group transition-all duration-300">
+                        <img class="w-[270px] h-[270px] rounded-[10px]" src="./assets/bannerH1.png" alt="teammate2">
+                        
+                        <div>
+                            <h2 class="font-[600] text-[14px] leading-[30px] text-[#2AB8DB] text-center mt-[20px]">IT Marketing</h2>
+                        <h4 class="font-[700] text-[20px] leading-100% text-[#1F242E] mt-[4px]">Roksana Rahman</h4>
+                        </div>
+
+                        <hr class="mt-[26px] border-2 border-[#1F242E1A] w-[90px] mx-[90px] mb-[5px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <ul class="flex justify-center items-center gap-5 mb-[17px]">
+                            <li>Fb.</li>
+                            <li class="group-hover:text-[#2AB8DB]">Ln.</li>
+                            <li>Dr.</li>
+                            <li>Be.</li>
+                        </ul>
+                    </div>
+                    <div class="cursor-pointer bg-[#FFFFFF] rounded-[10px] text-center group transition-all duration-300">
+                        <img class="w-[270px] h-[270px] rounded-[10px]" src="./assets/bannerH2.png" alt="teammate3">
+                        
+                        <div>
+                            <h2 class="font-[600] text-[14px] leading-[30px] text-[#2AB8DB] text-center mt-[20px]">IT Marketing</h2>
+                            <h4 class="font-[700] text-[20px] leading-100% text-[#1F242E] mt-[4px]">Roksana Rahman</h4>
+                        </div>
+
+                        <hr class="mt-[26px] border-2 border-[#1F242E1A] w-[90px] mx-[90px] mb-[5px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <ul class="flex justify-center items-center gap-5 mb-[17px]">
+                            <li>Fb.</li>
+                            <li>Ln.</li>
+                            <li class="group-hover:text-[#2AB8DB]">Dr.</li>
+                            <li>Be.</li>
+                        </ul>
+                    </div>
+                    <div class="cursor-pointer bg-[#FFFFFF] rounded-[10px] text-center group transition-all duration-300">
+                        <img class="w-[270px] h-[270px] rounded-[10px]" src="./assets/bannerH1.png" alt="teammate4">
+                        
+                        <div>
+                            <h2 class="font-[600] text-[14px] leading-[30px] text-[#2AB8DB] text-center mt-[20px]">IT Marketing</h2>
+                            <h4 class="font-[700] text-[20px] leading-100% text-[#1F242E] mt-[4px]">Yellow Piran Makuram</h4>
+                        </div>
+
+                        <hr class="mt-[26px] border-2 border-[#1F242E1A] w-[90px] mx-[90px] mb-[5px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <ul class="flex justify-center items-center gap-5 mb-[17px]">
+                            <li>Fb.</li>
+                            <li>Ln.</li>
+                            <li>Dr.</li>
+                            <li class="group-hover:text-[#2AB8DB]">Be.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <!-- description of naxite section -->
+        <div class="pb-100 pt-[120px]">
+            <div class=" bg-[url('./assets/descriptionOfNaxiteBG.png')] bg-cover object-cover bg-no-repeat flex gap-[20px]">
+                <div class="w-[50%] relative">
+                    <img class="object-cover" src="./assets/descriptionimage.jpg" alt="descriptionimage">
+                    <img class="absolute top-60 left-40" src="./assets/squareDots.png" alt="squareDots">
+                </div>
+
+                <div class="w-[50%]">
+                    <div class="">
+                        <div>
+                            <h2 class="font-[700] text-[32px] leading-[48px] text-[#FFFFFF]">We Are About our Company <br> Engineering IT services.</h2>
+                            <p class="font-[400] text-[16px] leading-[30px] text-[#FFFFFF] mt-[6px]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. Inside tomopi <br> condimentum dictum odio, sed faucibus enim ornare a. Nunc feugiat extem <br> usto, vestibulum imperdiet ligula mollis vel.</p>
+                        </div>
+                        <div class="mt-[18px]">
+                            <div class="mb-[26px]">
+                                <h4 class="font-[600] text-[18px] leading-none mb-[16px] text-[#FFFFFF]">Content Strategy 90%</h4>
+                                <input
+                                    type="range"
+                                    id="ContentStrategy"
+                                    name="ContentStrategy"
+                                    min="0"
+                                    max="100"
+                                    value="90"
+                                    step="10" 
+                                    class="ContentStrategy"
+                                    />
+                            </div>
+                            <div class="mb-[26px]">
+                                <h4 class="font-[600] text-[18px] leading-none mb-[16px] text-[#FFFFFF]">High Performance 90%</h4>
+                                <input
+                                    type="range"
+                                    id="ContentStrategy"
+                                    name="ContentStrategy"
+                                    min="0"
+                                    max="100"
+                                    value="90"
+                                    step="10" 
+                                    class="ContentStrategy"
+                                    />
+                            </div>
+                        </div>
+
+                        <div class="mt-[49px]">
+                            <button class="border border-[#FFFFFF1A] pt-[20px] pr-[38px] pb-[21px] pl-[39px] rounded-full text-[#FFFFFF] flex justify-center items-center gap-2 hover:bg-[#2AB8DB] font-[700] text-[16px] leading-none cursor-pointer">More About <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            $('.video-popup').magnificPopup({
+                type: 'iframe',
+                iframe: {
+                    patterns: {
+                        youtube: {
+                            index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+                            id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                            // Or null - full URL will be returned
+                            // Or a function that should return %id%, for example:
+                            // id: function(url) { return 'parsed id'; }
+
+                            src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+                            },
+                    }
+                }
+            });
+        });
+    </script>
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.my-director-slider', {
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
