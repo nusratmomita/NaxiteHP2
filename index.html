@@ -19,6 +19,8 @@
     <!-- swiper  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -27,7 +29,7 @@
 </head>
 <body class="syne-font">
 
-    <div class="bg-[url('./assets/bannerBG.png')] bg-cover bg-center bg-no-repeat">
+    <div class="bg-[url('./assets/bannerBG.png')] bg-cover bg-no-repeat">
         <!-- header section -->
         <header>
             <div>    
@@ -447,7 +449,6 @@
         <div class="pt-[120px]">
             <div class="bg-[url('./assets/descriptionOfNaxiteBG.png')] bg-cover object-cover bg-no-repeat flex gap-[20px]">
                 <div class="w-[50%] relative">
-                    <!-- <img class="object-cover h-auto" src="./assets/descriptionimage.jpg" alt="descriptionimage"> -->
                     <img class="absolute top-60 left-40" src="./assets/squareDots.png" alt="squareDots">
                 </div>
 
@@ -459,30 +460,17 @@
                         </div>
                         <div class="mt-[24px]">
                             <div class="mb-[26px]">
-                                <h4 class="font-[600] text-[18px] leading-none mb-[16px] text-[#FFFFFF]">Content Strategy 90%</h4>
-                                <input
-                                    type="range"
-                                    id="ContentStrategy"
-                                    name="ContentStrategy"
-                                    min="0"
-                                    max="100"
-                                    value="90"
-                                    step="10" 
-                                    class="ContentStrategy"
-                                    />
+                                <h4 class="font-[600] text-[18px] leading-none mb-[16px] text-[#FFFFFF]">Content Strategy 85%</h4>
+                                <div class="Bars">
+                                    <span data-width="85%"><span class="Bar"></span></span>
+                                </div>
                             </div>
-                            <div class="mb-[26px]">
+
+                            <div class="mt-[26px]">
                                 <h4 class="font-[600] text-[18px] leading-none mb-[16px] text-[#FFFFFF]">High Performance 90%</h4>
-                                <input
-                                    type="range"
-                                    id="ContentStrategy"
-                                    name="ContentStrategy"
-                                    min="0"
-                                    max="100"
-                                    value="90"
-                                    step="10" 
-                                    class="ContentStrategy"
-                                    />
+                                <div class="Bars">
+                                    <span data-width="90%"><span class="Bar"></span></span>
+                                </div>
                             </div>
                         </div>
 
@@ -802,6 +790,32 @@
                 clickable: true,
             },
         });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+        let animated = false;
+
+        function startProgressBars() {
+            $('.Bars span').each(function () {
+                let finalWidth = $(this).data('width');
+                $(this).find('.Bar').css('width', finalWidth);
+            });
+        }
+
+        function checkVisibility() {
+            let sectionTop = $('.Bars').offset().top;
+            let scrollBottom = $(window).scrollTop() + $(window).height();
+
+            if (scrollBottom > sectionTop && !animated) {
+                animated = true;
+                startProgressBars();
+            }
+        }
+
+        $(window).on('scroll', checkVisibility);
+        checkVisibility(); // run once on load
+    });
     </script>
 
 </body>
