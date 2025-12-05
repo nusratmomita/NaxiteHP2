@@ -32,72 +32,131 @@
     <div class="bg-[url('./assets/bannerBG.png')] bg-cover bg-no-repeat">
         <!-- header section -->
         <header>
-            <div>    
-                <div class="flex justify-center items-center gap-[150px] px-10">
-                    <!-- logon + navlinks -->
-                    <div class="flex gap-[50px]">
-                        <div>
-                            <a href="#">
-                                <img class="w-[174px] h-[38px] mt-8" src="./assets/Mainlogo.png" alt="logo">
-                            </a>
-                        </div>
-                        <div class="z-4">
-                            <ul class="flex gap-8">
-                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Home</a></li>
-                                <li class="relative group"><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] group-hover:text-[#2AB8DB] flex justify-center items-center gap-1" href="#">Pages <i class="text-[#77777780] lg:text-[#77777780] group-hover:text-[#2AB8DB] fa-solid fa-angle-down"></i></a>
-                                    <ul class="absolute top-full left-0 bg-[#FFFFFF] hidden lg:group-hover:block shadow-lg border-2 border-[#2AB8DB] rounded-[10px] text-left w-[220px]" > 
-                                        <li class="hover:pl-4 transition-all duration-300"><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] border-b border-[#EAEAEA] px-4">Page 1</a></li> 
-                                        <li class="hover:pl-4 transition-all duration-300"><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] border-b border-[#EAEAEA] px-4">Page 2</a></li> 
-                                        <li class="hover:pl-4 transition-all duration-300"><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] px-4">Page 3</a></li> 
-                                    </ul> 
-                                </li>
-                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Services</a></li>
-                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Projects</a></li>
-                                <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Contact</a></li>
-                            </ul>
-                            
-                        </div>
+            <div class="flex justify-between items-center lg:justify-center lg:gap-[150px] px-8 lg:px-10 py-5 lg:py-0">
+               
+                <!-- to blur the bg -->
+                <div id="overlay" class="block lg:hidden fixed inset-0 bg-black/50 z-40 hidden"></div>
+                
+                <!-- logo + navlinks -->
+                <div class="flex lg:gap-[50px]">
+                    <div>
+                        <a href="#">
+                            <img class="w-[150px] h-[38px] lg:w-[174px] lg:h-[38px] lg:mt-8" src="./assets/Mainlogo.png" alt="logo">
+                        </a>
                     </div>
-    
-                    <!-- no. and CTA -->
-                    <div class="flex gap-[59px] items-center">
-                        <div>
-                            <h3 class="font-[600] text-[16px] leading-[35px] text-[#FFFFFF]"><span class="text-[#FFA8A7]">Call Us:</span> (+55) -66 99 88</h3>
-                        </div>
-                        <div>
-                            <button class="group cursor-pointer hidden lg:flex font-bold items-center gap-2 border border-[#1F242E1A] px-6 py-3 rounded-full bg-[#2AB8DB] text-white hover:bg-transparent hover:border hover:border-[#2AB8DB]">
-                                <i class="fa-regular fa-message text-white group-hover:text-white"></i>
-                                Let's Chat
-                            </button>
-                        </div>
+
+                    <div id="mobileMenu" class="z-4 hidden lg:border-none lg:flex g:flex-row lg:items-center gap-6 lg:static top-20 bg-[#2AB8DB] lg:py-0 py-3 rounded-[20px] right-5 w-2/3 lg:w-auto lg:bg-transparent">
+                        <ul class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 font-[700] text-[18px] text-white lg:text-[#1F242E]">
+                            <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Home</a></li>
+                            <li class="relative group"><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] group-hover:text-[#2AB8DB] flex justify-center items-center gap-1" href="#">Pages <i class="text-[#77777780] lg:text-[#77777780] group-hover:text-[#2AB8DB] fa-solid fa-angle-down"></i></a>
+                                <ul class="absolute top-full left-0 bg-[#FFFFFF] hidden lg:group-hover:block shadow-lg border-2 border-[#2AB8DB] rounded-[10px] text-left w-[220px]" > 
+                                    <li class="hover:pl-4 transition-all duration-300"><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] border-b border-[#EAEAEA] px-4">Page 1</a></li> 
+                                    <li class="hover:pl-4 transition-all duration-300"><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] border-b border-[#EAEAEA] px-4">Page 2</a></li> 
+                                    <li class="hover:pl-4 transition-all duration-300"><a href="#" class="text-md font-bold whitespace-nowrap text-[#1F242E] block px-4 py-2 hover:text-[#2AB8DB] px-4">Page 3</a></li> 
+                                </ul> 
+                            </li>
+                            <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Services</a></li>
+                            <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Projects</a></li>
+                            <li><a class="font-[700] text-[18px] leading-[100px] text-[#FFFFFF] hover:text-[#2AB8DB]" href="#">Contact</a></li>
+                        </ul>
+                        
                     </div>
                 </div>
-                <hr class="w-full text-[#FFFFFF1A]">
+                
+                <!-- Hamburger -->
+                <button id="hamburger" class="lg:hidden block cursor-pointer">
+                    <img src="./assets/whiteHambugerIcon.png" class="cursor-pointer" />
+                </button>
+                
+                <!-- no. and CTA -->
+                <div class="lg:flex gap-[59px] items-center hidden">
+                    <div>
+                        <h3 class="hidden lg:block whitespace-nowrap font-[600] text-[16px] leading-[35px] text-[#FFFFFF]"><span class="text-[#FFA8A7]">Call Us:</span> (+55) -66 99 88</h3>
+                    </div>
+                    <div>
+                        <button class="group cursor-pointer hidden lg:flex font-bold items-center gap-2 border border-[#1F242E1A] px-6 py-3 rounded-full bg-[#2AB8DB] text-white hover:bg-transparent hover:border hover:border-[#2AB8DB]">
+                            <i class="fa-regular fa-message text-white group-hover:text-white"></i>
+                            Let's Chat
+                        </button>
+                    </div>
+                </div>
             </div>
+            <hr class="w-full text-[#FFFFFF1A]">
         </header>
+
+        <!-- for small screen -->
+        <div id="drawer" class="overflow-y-auto block lg:hidden fixed top-0 left-0 w-[260px] h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-6">
+
+            <div class="flex justify-between items-center flex-row-reverse">
+                <!-- cross icon -->
+                <button id="crossIcon" class="text-3xl cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <!-- logo -->
+                <div>
+                    <img class="w-[110px] lg:w-[173px]" src="./assets/logo.png" alt="siteIcon">
+                </div>
+            </div>
+        
+            <hr class="my-2 w-[200px] text-gray-400 mb-4">
+        
+            <ul class="flex flex-col gap-4 font-[700] text-[20px] text-[#1F242E]">
+
+                <li><a href="#" class="hover:text-[#2AB8DB]">Home</a></li>
+
+                <li class="group">
+                    <button id="mobilePageNav" class="flex justify-between items-center gap-2 hover:text-[#2AB8DB] w-full">
+                        <span>Pages</span>
+                        <i class="fa-solid fa-angle-down hover:text-white hover:bg-[#2AB8DB] text-black bg-gray-300 rounded-[10px] p-1 cursor-pointer"></i>
+                    </button>
+
+                    <ul id="mobilePageNavMenu" class="hidden ml-4 mt-2 text-[18px] font-[600]">
+                        <li><a class="block py-1 text-[#1F242E] hover:text-[#2AB8DB]" href="#">Page 1</a></li>
+                        <li><a class="block py-1 text-[#1F242E] hover:text-[#2AB8DB]" href="#">Page 2</a></li>
+                        <li><a class="block py-1 text-[#1F242E] hover:text-[#2AB8DB]" href="#">Page 3</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="hover:text-[#2AB8DB]">Services</a></li>
+                <li><a href="#" class="hover:text-[#2AB8DB]">Projects</a></li>
+                <li><a href="#" class="hover:text-[#2AB8DB]">Contact</a></li>
+            </ul>
+
+            <!-- Button -->
+            <div class="mt-60">
+                <div>
+                    <h3 class="font-[600] text-[16px] leading-[35px] text-[#181818]">Call Us: (+55) -66 99 88</h3>
+                </div>
+                <hr class="ml-0 my-4 w-[200px] text-gray-400">
+                <button class="group cursor-pointer lg:flex font-bold items-center gap-2 border border-[#2AB8DB] px-6 py-3 rounded-full hover:bg-[#2AB8DB] hover:text-white w-[190px]">
+                    <i class="fa-regular fa-message text-[#2AB8DB] group-hover:text-white"></i>
+                    Let's Chat
+                </button>
+            </div>
+        </div>
         <!-- banner section -->
         <div class="swiper my-director-slider">
             <div class="swiper-wrapper">
                 <!-- slide 1 -->
                 <div class="swiper-slide">
-                    <div class="container pb-[99px] flex justify-center items-center relative">
-                        <div class="w-[60%]">
-                            <div class="text-[#FFFFFF] ">
-                                <h2 class="text-[62px] font-[700] leading-[70px]">Perfect Place for <br> your Of IT Service & <br> IT Solutions.</h2>
-                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                    <div class="container pb-[5px] lg:pb-[99px] flex flex-col lg:flex-row justify-center items-center relative">
+                        <div class="lg:w-[60%]">
+                            <div class="text-[#FFFFFF] px-3 lg:px-0">
+                                <h2 class="pt-10 lg:pt-0 text-center lg:text-left text-[40px] lg:text-[62px] font-[500] lg:font-[700] leading-[55px] lg:leading-[70px]">Perfect Place for <br class="hidden lg:block"> your Of IT Service & <br class="hidden lg:block"> IT Solutions.</h2>
+                                <p class="text-center lg:text-left font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
                             </div>
                             <div class="flex justify-center items-center lg:block">
                                 <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
         
-                        <div class="w-[40%]">
-                            <div class="relative mt-40">
-                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
-                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                        <div class="lg:w-[40%]">
+                            <div class="relative lg:mt-40">
+                                <img class="hidden lg:block" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="hidden lg:block absolute -top-20 left-30" src="./assets/bannerImag2.png" alt="bannerImg2">
                             </div>
                             <!-- video play button -->
-                            <div class="hidden lg:block absolute top-130 right-5">
+                            <div class="hidden lg:block absolute lg:top-130 lg:right-5">
                                 <a 
                                     href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
                                     class="video-popup relative cursor-pointer"
@@ -111,32 +170,32 @@
                         </div>
         
                         <div>
-                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
-                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                            <img class="hidden lg:block absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="hidden lg:block absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
                         </div>
                     </div>
                 </div>
 
                 <!-- slide 2 -->
                 <div class="swiper-slide">
-                    <div class="container pb-[99px] flex justify-center items-center relative">
-                        <div class="w-[60%]">
-                            <div class="text-[#FFFFFF] ">
-                                <h2 class="text-[62px] font-[700] leading-[70px]">Best Of IT Service & IT Solutions.</h2>
-                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                    <div class="container pb-[5px] lg:pb-[99px] flex flex-col lg:flex-row justify-center items-center relative">
+                        <div class="lg:w-[60%]">
+                            <div class="text-[#FFFFFF] px-3 lg:px-0">
+                                <h2 class="pt-10 lg:pt-0 text-center lg:text-left text-[40px] lg:text-[62px] font-[500] lg:font-[700] leading-[55px] lg:leading-[70px]">Best Of IT  Service & <br class="hidden lg:block">  IT Solutions.</h2>
+                                <p class="text-center lg:text-left font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
                             </div>
                             <div class="flex justify-center items-center lg:block">
                                 <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
         
-                        <div class="w-[40%]">
-                            <div class="relative mt-40">
-                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
-                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                        <div class="lg:w-[40%]">
+                            <div class="relative lg:mt-40">
+                                <img class="hidden lg:block" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="hidden lg:block absolute -top-20 left-30" src="./assets/bannerImag2.png" alt="bannerImg2">
                             </div>
                             <!-- video play button -->
-                            <div class="hidden lg:block absolute absolute top-130 right-5">
+                            <div class="hidden lg:block absolute lg:top-130 lg:right-5">
                                 <a 
                                     href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
                                     class="video-popup relative cursor-pointer"
@@ -150,32 +209,32 @@
                         </div>
         
                         <div>
-                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
-                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                            <img class="hidden lg:block absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="hidden lg:block absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
                         </div>
                     </div>
                 </div>
 
                 <!-- slide 3 -->
                 <div class="swiper-slide">
-                    <div class="container pb-[99px] flex justify-center items-center relative">
-                        <div class="w-[60%]">
-                            <div class="text-[#FFFFFF] ">
-                                <h2 class="text-[62px] font-[700] leading-[70px]">Perfect Place for <br> your Of IT Service & <br> IT Solutions.</h2>
-                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                    <div class="container pb-[5px] lg:pb-[99px] flex flex-col lg:flex-row justify-center items-center relative">
+                        <div class="lg:w-[60%]">
+                            <div class="text-[#FFFFFF] px-3 lg:px-0">
+                                <h2 class="pt-10 lg:pt-0 text-center lg:text-left text-[40px] lg:text-[62px] font-[500] lg:font-[700] leading-[55px] lg:leading-[70px]">Perfect Place for <br class="hidden lg:block"> your Of IT Service & <br class="hidden lg:block"> IT Solutions.</h2>
+                                <p class="text-center lg:text-left font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
                             </div>
                             <div class="flex justify-center items-center lg:block">
                                 <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
         
-                        <div class="w-[40%]">
-                            <div class="relative mt-40">
-                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
-                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                        <div class="lg:w-[40%]">
+                            <div class="relative lg:mt-40">
+                                <img class="hidden lg:block" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="hidden lg:block absolute -top-20 left-30" src="./assets/bannerImag2.png" alt="bannerImg2">
                             </div>
                             <!-- video play button -->
-                            <div class="hidden lg:block absolute absolute top-130 right-5">
+                            <div class="hidden lg:block absolute lg:top-130 lg:right-5">
                                 <a 
                                     href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
                                     class="video-popup relative cursor-pointer"
@@ -189,32 +248,32 @@
                         </div>
         
                         <div>
-                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
-                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                            <img class="hidden lg:block absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="hidden lg:block absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
                         </div>
                     </div>
                 </div>
 
                 <!-- slide 4 -->
                 <div class="swiper-slide">
-                    <div class="container pb-[99px] flex justify-center items-center relative">
-                        <div class="w-[60%]">
-                            <div class="text-[#FFFFFF] ">
-                                <h2 class="text-[62px] font-[700] leading-[70px]">Best Of IT Service & IT Solutions.</h2>
-                                <p class="font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
+                    <div class="container pb-[5px] lg:pb-[99px] flex flex-col lg:flex-row justify-center items-center relative">
+                        <div class="lg:w-[60%]">
+                            <div class="text-[#FFFFFF] px-3 lg:px-0">
+                                <h2 class="pt-10 lg:pt-0 text-center lg:text-left text-[40px] lg:text-[62px] font-[500] lg:font-[700] leading-[55px] lg:leading-[70px]">Best Of IT  Service & <br class="hidden lg:block">  IT Solutions.</h2>
+                                <p class="text-center lg:text-left font-[400] text-[18px] leading-[30px]">Pellentesque a arcu tincidunt, sollicitudin eros sed, <br> venenatis justo. Proin sed tellus massa. Nullam bibendum sodales est in faucibus.</p>
                             </div>
                             <div class="flex justify-center items-center lg:block">
                                 <button class="cursor-pointer whitespace-nowrap syne-font font-[700] text-4 tracking-wider mt-[45px] bg-[#2AB8DB] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#2AB8DB] pt-[21px] pb-[20px] px-[50px] rounded-[100px]">Get In Touch<i class="ml-2 fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
         
-                        <div class="w-[40%]">
-                            <div class="relative mt-40">
-                                <img class="debugg" src="./assets/bannerImg1.png" alt="bannerImg1">
-                                <img class="absolute -top-20 left-30 debugg" src="./assets/bannerImag2.png" alt="bannerImg2">
+                        <div class="lg:w-[40%]">
+                            <div class="relative lg:mt-40">
+                                <img class="hidden lg:block" src="./assets/bannerImg1.png" alt="bannerImg1">
+                                <img class="hidden lg:block absolute -top-20 left-30" src="./assets/bannerImag2.png" alt="bannerImg2">
                             </div>
                             <!-- video play button -->
-                            <div class="hidden lg:block absolute absolute top-130 right-5">
+                            <div class="hidden lg:block absolute lg:top-130 lg:right-5">
                                 <a 
                                     href="https://www.youtube.com/watch?v=nMfPqeZjc2c" 
                                     class="video-popup relative cursor-pointer"
@@ -228,46 +287,48 @@
                         </div>
         
                         <div>
-                            <img class="absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
-                            <img class="absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
+                            <img class="hidden lg:block absolute top-[573px] right-[450px] bottom-[114px]" src="./assets/pink_circle.png" alt="pink_circle">
+                            <img class="hidden lg:block absolute top-8 -left-8"  src="./assets/blue_circle.png" alt="blue_circle">
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Pagination dots -->
-            <div class="swiper-pagination mb-[50px] -ml-155"></div>
+            <div class="mt-[50px] lg:mt-[0px]">
+                <div class="swiper-pagination lg:mb-[50px] lg:-ml-155"></div>
+            </div>
         </div>
     </div>
 
-    <main class="bg-[#F7F7F7]">
+    <main class="bg-[#F7F7F7] overflow-hidden">
        <!-- about us section -->
         <div class="pt-[106px]">
-            <div class="container flex items-start gap-[30px]">
+            <div class="container flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[60px]">
                 <!-- left side -->
-                <div class="w-[50%]">
-                    <div>
-                        <h2 class="font-[700] text-[32px] leading-[48px] text-[#1F242E] mb-[11px]">We Are About our Company Engineering IT services.</h2>
-                        <p class="font-[400] text-[16px] leading-[30px] text-[#777777]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. Inside tomopi condimentum dictum odio, sed faucibus enim ornare a. Nunc feugiat extem usto, vestibulum imperdiet ligula mollis vel.</p>
+                <div class="lg:w-[50%]">
+                    <div class="px-4 lg:px-0">
+                        <h2 class="text-center lg:text-left font-[700] text-[32px] leading-[48px] text-[#1F242E] mb-[11px]">We Are About our Company Engineering IT services.</h2>
+                        <p class="text-center lg:text-left font-[400] text-[16px] leading-[30px] text-[#777777]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. Inside tomopi condimentum dictum odio, sed faucibus enim ornare a. Nunc feugiat extem usto, vestibulum imperdiet ligula mollis vel.</p>
                     </div>
-                    <div class="mt-8 flex">
+                    <div class="mt-8 flex flex-row justify-center items-center gap-4 lg:gap-0 px-4 lg:px-0">
                         <div>
-                            <img src="./assets/blueimgDots.png" alt="blueimgDots">
-                            <img class="w-[260px] h-[357px] object-cover -mt-90 ml-[20px]" src="./assets/aboutus1.jpg" alt="aboutus1">
+                            <img class="hidden lg:block" src="./assets/blueimgDots.png" alt="blueimgDots">
+                            <img class="w-[260px] h-[357px] object-cover lg:-mt-92 lg:ml-[20px]" src="./assets/aboutus1.jpg" alt="aboutus1">
                         </div>
                         <div class="relative">
-                            <img src="./assets/pinkimgDots.png" alt="blueimgDots">
-                            <img class="w-[240px] h-[357px] object-cover absolute bottom-5 left-[15px] " src="./assets/aboutus2.jpg" alt="aboutus2">
+                            <img class="hidden lg:block" src="./assets/pinkimgDots.png" alt="blueimgDots">
+                            <img class="w-[240px] h-[357px] object-cover lg:absolute lg:bottom-5 lg:left-[15px] " src="./assets/aboutus2.jpg" alt="aboutus2">
                         </div>
                     </div>
                 </div>
                 <!-- right side -->
-                <div class="w-[50%]">
-                    <div class="bg-[url('./assets/aboutusBG.png')] w-[512px] h-[512px]">
-                        <div class="flex flex-col lg:flex-row gap-[30px] justify-center -ml-30">
+                <div class="lg:w-[50%]">
+                    <div class="lg:bg-[url('./assets/aboutusBG.png')] w-[512px] h-[512px] mt-20 lg:mt-0 mb-90 lg:mb-0">
+                        <div class="flex flex-col lg:flex-row gap-[30px] justify-center items-center lg:-ml-30">
                             <!-- 1st service -->
-                            <div>
-                                <div class="w-[25%] mt-40 group w-[270px] h-[286px] bg-[#FFFFFF] flex flex-col justify-start items-center rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#2AB8DB]">
+                            <div class="">
+                                <div class="w-[25%] lg:mt-40 group w-[270px] h-[286px] bg-[#FFFFFF] flex flex-col justify-start items-center rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#2AB8DB]">
                                     <div class="group-hover:hidden block w-[100px] h-[110px] rounded-[10px] flex justify-center items-start transition-all duration-300 mt-[48px]">
                                         <img class="w-[50px] h-[50px] transition-all duration-300
                                                     group-hover:filter 
@@ -295,17 +356,17 @@
                                     
                                 </div>
                                 <!-- tags -->
-                                <div class="mt-[50px] flex flex-col gap-[10px]" >
+                                <div class="hidden lg:block lg:mt-[50px] flex flex-col gap-[10px]" >
                                     <div>
                                         <button class="cursor-pointer font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF]">UX/UI Design</button>
                                         <button class="cursor-pointer font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF]">Photography</button>
                                     </div>
-                                    <button class="cursor-pointer w-[160px] w-font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF]">Graphics & Design</button>
+                                    <button class="cursor-pointer w-[160px] w-font-[400] text-[16px] leading-[30px] bg-[#FFFFFF] text-[#1F242E] px-4 py-[3px] rounded-full hover:bg-[#2AB8DB] hover:text-[#FFFFFF] mt-4">Graphics & Design</button>
                                 </div>
                             </div>
                            
-                            
-                            <div class="w-[25%]">
+            
+                            <div class="lg:w-[25%]">
                                 <!-- 2nd service -->
                                 <div class=" group w-[270px] h-[286px] bg-[#FFFFFF] flex flex-col justify-start items-center rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-[#2AB8DB]">
                                     <div class="group-hover:hidden block w-[100px] h-[110px] rounded-[10px] flex justify-center items-start transition-all duration-300 mt-[48px]">
@@ -447,18 +508,18 @@
 
         <!-- description of naxite section -->
         <div class="pt-[120px]">
-            <div class="bg-[url('./assets/descriptionOfNaxiteBG.png')] bg-cover object-cover bg-no-repeat flex gap-[20px]">
-                <div class="w-[50%] relative">
-                    <img class="absolute top-60 left-40" src="./assets/squareDots.png" alt="squareDots">
+            <div class="bg-[url('./assets/descriptionOfNaxiteBG.png')] bg-cover object-cover bg-no-repeat lg:flex lg:gap-[20px]">
+                <div class="lg:w-[50%] relative">
+                    <img class="hidden lg:block absolute top-60 left-40" src="./assets/squareDots.png" alt="squareDots">
                 </div>
 
-                <div class="w-[50%] relative">
+                <div class="lg:w-[50%] relative">
                     <div class="pt-[107px] pb-[120px]">
-                        <div>
-                            <h2 class="font-[700] text-[32px] leading-[48px] text-[#FFFFFF]">We Are About our Company <br> Engineering IT services.</h2>
-                            <p class="font-[400] text-[16px] leading-[30px] text-[#FFFFFF] mt-[6px]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. Inside tomopi <br> condimentum dictum odio, sed faucibus enim ornare a. Nunc feugiat extem <br> usto, vestibulum imperdiet ligula mollis vel.</p>
+                        <div class="px-4 lg:px-0">
+                            <h2 class="text-center lg:text-left font-[700] text-[32px] leading-[48px] text-[#FFFFFF]">We Are About our Company <br> Engineering IT services.</h2>
+                            <p class="text-center lg:text-left font-[400] text-[16px] leading-[30px] text-[#FFFFFF] mt-[6px]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. Inside tomopi <br> condimentum dictum odio, sed faucibus enim ornare a. Nunc feugiat extem <br> usto, vestibulum imperdiet ligula mollis vel.</p>
                         </div>
-                        <div class="mt-[24px]">
+                        <div class="mt-[24px] overflow-hidden">
                             <div class="mb-[26px]">
                                 <h4 class="font-[600] text-[18px] leading-none mb-[16px] text-[#FFFFFF]">Content Strategy 85%</h4>
                                 <div class="Bars">
@@ -474,7 +535,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-[49px]">
+                        <div class="mt-[49px] flex justify-center items-center lg:justify-start">
                             <button class="border border-[#FFFFFF1A] pt-[20px] pr-[38px] pb-[21px] pl-[39px] rounded-full text-[#FFFFFF] flex justify-center items-center gap-2 hover:bg-[#2AB8DB] font-[700] text-[16px] leading-none cursor-pointer">More About <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
 
@@ -496,129 +557,129 @@
                     <p class="font-[400] text-[16px] leading-[30px] text-center text-[#777777] px-4 lg:px-0">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <br class="hidden lg:block"> Velit officia consequat duis enim velit mollit. lorem ipsum</p>
                 </div>
 
-                <div class="mt-[33px] grid grid-cols-4 grid-rows-2 gap-[30px]">
-                    <div class="group cursor-pointer">
+                <div class="mt-[33px] grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 lg:gap-[30px]">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy1.jpg" alt="caseStudy1">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
                         </div>
-                        <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <hr class="mb-10 lg:mb-0 border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy2.jpg" alt="caseStudy2">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Web design, Mobile</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Digital agency, business design.</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Web design, Mobile</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Digital agency, business design.</h4>
                         </div>
-                        <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <hr class="mb-10 lg:mb-0 border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy1.jpg" alt="caseStudy1">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
                         </div>
-                        <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <hr class="mb-10 lg:mb-0 border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy2.jpg" alt="caseStudy2">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Web design, Mobile</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Digital agency, business design.</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Web design, Mobile</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Digital agency, business design.</h4>
                         </div>
-                        <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <hr class="mb-10 lg:mb-0 border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy1.jpg" alt="caseStudy1">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
                         </div>
-                        <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <hr class="mb-10 lg:mb-0 border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy2.jpg" alt="caseStudy2">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Web design, Mobile</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Digital agency, business design.</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Web design, Mobile</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Digital agency, business design.</h4>
                         </div>
-                        <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                        <hr class="mb-10 lg:mb-0 border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer flex flex-col justify-center items-center">
                         <div class="relative">
                             <img class="w-[270px] h-[300px] object-cover rounded-[10px]" src="./assets/caseStudy1.jpg" alt="caseStudy1">
 
-                            <div class="absolute top-4 right-8 bottom-0">
+                            <div class="absolute top-4 right-8 bottom-0 hidden lg:block">
                                 <div class="bg-[#2AB8DB] w-[100px] h-[100px] rounded-[100px] flex justify-center items-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <i class="fa-solid fa-arrow-up-long text-[#FFFFFF] rotate-20 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-[25px]">
-                            <h3 class="font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
-                            <h4 class="font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
+                            <h3 class="text-center lg:text-left font-[600] text-[14px] leading-none trackig-[4%] text-[#2AB8DB] mb-[8px]">Marketing, Software</h3>
+                            <h4 class="text-center lg:text-left font-[700] text-[24px] leading-[34px] text-[#1F242E]">Software License Management</h4>
                         </div>
                         <hr class="border-2 border-[#1F242E1A] w-[130px] mt-[21px] group-hover:border-2 group-hover:border-[#2AB8DB]">
                     </div>
 
                     <!-- more btn -->
-                    <div class="cursor-pointer w-[200px] h-[200px] border border-[#1F242E] rounded-full flex justify-center items-center ml-[25px] mt-[120px] hover:bg-[#2AB8DB] hover:border-[#2AB8DB] hover:text-[#FFFFFF] transition-all duration-300">
-                        <button class="font-[400] text-[16px]">View All Portfolio <i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="whitespace-nowrap w-[150px] lg:w-[200px] lg:h-[200px] border border-[#1F242E] rounded-full flex justify-center items-center lg:ml-[25px] mt-[50px] lg:mt-[120px] hover:bg-[#2AB8DB] hover:border-[#2AB8DB] hover:text-[#FFFFFF] transition-all duration-300 px-25 py-2 mx-35 lg:mx-0">
+                        <button class="cursor-pointer font-[400] text-[16px]">View All Portfolio <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -627,9 +688,9 @@
         <!-- why choose us section -->
         <div class="mt-[120px]">
             <div class="bg-[#FFFFFF]">
-                <div class="flex flex-col lg:flex-row gap-[15px] lg:gap-[140px] items-center container relative">
+                <div class="flex flex-col lg:flex-row lg:gap-[140px] items-center container relative">
                     <div class="text-[#1F242E] pt-[100px]">
-                        <div>
+                        <div class="px-4 lg:px-0">
                             <h2 class="font-[700] text-[32px] leading-[42px] text-center lg:text-left">Why Choose Us Our It <br> Solution Company Service.</h2>
                             <p class="mt-[12px] mb-[29px] text-center lg:text-left text-[#777777]">Nulla et neque id nibh pretium vestibulum vitae euismod nisi. <br class="hidden lg:block"> Inside tomopi condimentum dictum odio, sed faucibus enim <br class="hidden lg:block"> ornare a. Nunc feugiat extem usto vestibulum.</p>
                         </div>
@@ -650,7 +711,7 @@
                             </div>
                         </div>
                     </div>
-                    <img class="w-[570px] h-[430px] rounded-[10px]" src="./assets/teamwork.jpg" alt="teamwork">
+                    <img class="-mt-15 lg:-mt-0 mb-10 lg:mb-0 px-4 lg:px-0 w-[570px] h-[430px] rounded-[10px]" src="./assets/teamwork.jpg" alt="teamwork">
 
                     <img class="hidden lg:block absolute top-[80px] right-[330px] w-[65px] h-[65px]" src="./assets/pinkSquareDots.png" alt="pinkSquareDots">
                     <img class="hidden lg:block absolute top-[80px] right-[450px] w-[65px] h-[65px] bg-[#2AB8DB] w-[76px] h-[76px] rounded-[100%] p-1" src="./assets/wifi.png" alt="wifi">
@@ -670,8 +731,8 @@
                 </div>
 
                 <!-- pricing divs -->
-                <div class="mt-[32px] flex gap-[30px]">
-                    <div class="w-[50%] bg-[#FFFFFF] rounded-[10px]">
+                <div class="mt-[32px] flex flex-col lg:flex-row gap-[30px]">
+                    <div class="lg:w-[50%] bg-[#FFFFFF] rounded-[10px] group cursor-pointer mx-4 lg:mx-0">
                         <!-- price -->
                         <div class="flex relative">
                             <div>
@@ -684,8 +745,8 @@
                                         <h2 class="font-[500] text-[24px] leading-[34px] text-[#181818]">Best Regular Plan</h2>
                                     </div>
                                     <div class="mt-[21px]">
-                                        <hr class="mt-[26px] border-2 border-[#1F242E1A] w-[90px] group-hover:border-2 group-hover:border-[#2AB8DB]">
-                                        <button class="font-[700] text-[14px] mt-[16px] text-[#777777] flex gap-1 justify-center items-center ">Read More <i class="fa-solid fa-arrow-right text-[#777777]"></i></button>
+                                        <hr class="group-hover:text-[#2AB8DB] mt-[26px] border-2 border-[#1F242E1A] w-[90px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                                        <button class="group-hover:text-[#2AB8DB] font-[700] text-[14px] mt-[16px] text-[#777777] flex gap-1 justify-center items-center ">Read More <i class="group-hover:text-[#2AB8DB] fa-solid fa-arrow-right text-[#777777]"></i></button>
                                     </div>
                                 </div>
                                 <div class="mt-[9px] pl-[67px]">
@@ -703,12 +764,12 @@
                                     <li class="font-[500] text-[16px] leading-[43px] text-[#676767]">Unmetered Bandwidth</li>
                                 </ul>
                             </div>
-                            <div class="bg-[#2AB8DB] absolute top-11 -right-2 rotate-55 rounded-[5px] overflow-hidden">
+                            <div class="hidden lg:block bg-[#2AB8DB] absolute top-11 -right-2 rotate-55 rounded-[5px] overflow-hidden">
                                 <button class="text-[#FFFFFF] px-4 py-2">Most Popular</button>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[50%] bg-[#FFFFFF] rounded-[10px]">
+                    <div class="lg:w-[50%] bg-[#FFFFFF] rounded-[10px] group cursor-pointer mx-4 lg:mx-0">
                         <!-- price -->
                         <div class="flex relative">
                             <div>
@@ -720,9 +781,9 @@
                                     <div class="mt-[17px]">
                                         <h2 class="font-[500] text-[24px] leading-[34px] text-[#181818]">Best Regular Plan</h2>
                                     </div>
-                                    <div class="mt-[21px]">
-                                        <hr class="mt-[26px] border-2 border-[#1F242E1A] w-[90px] group-hover:border-2 group-hover:border-[#2AB8DB]">
-                                        <button class="font-[700] text-[14px] mt-[16px] text-[#777777] flex gap-1 justify-center items-center ">Read More <i class="fa-solid fa-arrow-right text-[#777777]"></i></button>
+                                    <div class="mt-[21px] transition-all duration-300">
+                                        <hr class="group-hover:text-[#2AB8DB] mt-[26px] border-2 border-[#1F242E1A] w-[90px] group-hover:border-2 group-hover:border-[#2AB8DB]">
+                                        <button class="group-hover:text-[#2AB8DB] font-[700] text-[14px] mt-[16px] text-[#777777] flex gap-1 justify-center items-center ">Read More <i class="group-hover:text-[#2AB8DB] fa-solid fa-arrow-right text-[#777777]"></i></button>
                                     </div>
                                 </div>
                                 <div class="mt-[9px] pl-[67px]">
@@ -752,35 +813,35 @@
 
         <!-- services section -->
         <div class="mt-[120px]">
-            <div class="container flex gap-[99px]">
+            <div class="container flex flex-col lg:flex-row gap-[99px]">
                 <!-- images -->
-                <div class="w-[50%] relative">
+                <div class="w-[50%] relative flex flex-col lg:flex-row gap-10 lg:gap-0 mx-30 lg:mx-0">
                     <img class="w-[370px] h-[450px] object-cover" src="./assets/webdev.jpg" alt="webdev">
-                    <img class="absolute top-30 left-50 w-[400px] h-[420px] object-cover" src="./assets/contentWriting.jpg" alt="contentWriting">
+                    <img class="lg:absolute lg:top-30 lg:left-50 w-[400px] h-[420px] object-cover" src="./assets/contentWriting.jpg" alt="contentWriting">
                 </div>
                 <!-- text -->
-                <div class="w-[50%]">
-                    <div>
-                        <h2 class="font-[700] text-[32px] leading-[42px] text-[#1F242E] mb-[10px]">We provide brilliant ideas & <br> adding success to your <br> business motion.</h2>
-                        <p class="font-[400] text-[16px] leading-[30px] text-[#777777]">Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat neque eu purus rhoncus, vel tincidunt odio ultrices. Sed feugiat feugiat felis. Curabitur posuere tristique mauris non blandit. Sed consectetur venenatis enim, vitae vestibulum ipsum tincidunt.</p>
+                <div class="lg:w-[50%]">
+                    <div class="px-4 lg:px-0 mt-10 lg:mt-0">
+                        <h2 class="text-center lg:text-left font-[700] text-[32px] leading-[42px] text-[#1F242E] mb-[10px]">We provide brilliant ideas & <br class="hidden lg:block"> adding success to your <br> business motion.</h2>
+                        <p class="ftext-center lg:text-left ont-[400] text-[16px] leading-[30px] text-[#777777]">Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat neque eu purus rhoncus, vel tincidunt odio ultrices. Sed feugiat feugiat felis. Curabitur posuere tristique mauris non blandit. Sed consectetur venenatis enim, vitae vestibulum ipsum tincidunt.</p>
                     </div>
-                    <div class="flex gap-[30px]">
+                    <div class="flex flex-col lg:flex-row text-center lg:text-left gap-[30px]">
                         <div class="mt-[20px]">
-                            <div class="flex gap-3 items-center">
-                                <img class="w-[6px] h-[6px]" src="./assets/RectangleIcon.png" alt="RectangleIcon">
+                            <div class="flex lg:justify-start justify-center items-center gap-3 items-center">
+                                <img class="w-[6px] h-[6px] text-center lg:text-left" src="./assets/RectangleIcon.png" alt="RectangleIcon">
                                 <h3 class="font-[600] text-[24px] leading-[32px] text-[#1F242E]">Web Design</h3>
                             </div>
                             <p class="font-[400] text-[16px] leading-[30px] text-[#777777] mt-2">Praesent placerat neque eu purus <br> rhonc, vel tincidunt odio ultrices. <br> Sed feugiat feugiat felis.</p>
                         </div>
                         <div class="mt-[20px]">
-                            <div class="flex gap-3 items-center">
+                            <div class="flex lg:justify-start justify-center items-center gap-3 items-center">
                                 <img class="w-[6px] h-[6px]" src="./assets/RectangleIcon.png" alt="RectangleIcon">
                                 <h3 class="font-[600] text-[24px] leading-[32px] text-[#1F242E]">Content Writing</h3>
                             </div>
                             <p class="font-[400] text-[16px] leading-[30px] text-[#777777] mt-2">Praesent placerat neque eu purus <br> rhonc, vel tincidunt odio ultrices. <br> Sed feugiat feugiat felis.</p>
                         </div>
                     </div>
-                    <div class="mt-[52px]">
+                    <div class="mt-[52px] flex justify-center lg:justify-start items-center">
                         <button class="border border-[#1F242E1A] pt-[20px] pr-[38px] pb-[21px] pl-[39px] rounded-full text-[#1F242E] flex justify-center items-center gap-2 hover:bg-[#2AB8DB] hover:text-[#FFFFFF] font-[700] text-[16px] leading-none cursor-pointer">Discover More <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
@@ -789,7 +850,7 @@
 
         <!-- more features -->
         <div class="mt-[120px]">
-            <div class="mx-15 lg:mx-0 mb-0 container pb-0 grid grid-cols-2 grid-rows-2 justify-center items-center lg:grid-cols-6 gap-[30px]">
+            <div class="lg:mx-0 mb-0 container pb-0 grid grid-cols-2 grid-rows-2 justify-center items-center lg:grid-cols-6 gap-[30px]">
                 <div class="group cursor-pointer bg-[#1F242E08] pt-[30px] pb-[39px] px-[17px] w-[170px] rounded-[10px] hover:bg-[#2AB8DB]">
                     <img class="px-[10px] hovered_services group-hover:filter 
                                 group-hover:invert-[100%] 
@@ -866,7 +927,7 @@
         </div>
 
         <!-- blog section  -->
-        <div class="-mt-[150px]">
+        <div class="lg:-mt-[150px] mt-[120px]">
             <div class="container">
                 <div>
                     <h3 class="font-[700] text-[52px] text-center text-[#1F242E] ">Our News And Blogs</h3>
@@ -874,7 +935,7 @@
                 </div>
                 
                 <div class="mt-[43px] flex flex-col lg:flex-row gap-[30px] justify-center items-center">
-                    <div class="cursor-pointer group relative bg-[#FFFFFF] rounded-[10px] shadow-xl text-center">
+                    <div class="cursor-pointer group relative bg-[#FFFFFF] rounded-[10px] text-center">
                         <img class="w-[370px] h-[270px] rounded-[10px] transition-all duration-300" src="./assets/blog1.jpg" alt="blog1">
                         <h2 class="font-[600] text-[24px] leading-[34px] text-[##1F242E] text-left mt-[20px] mx-[30px]">Praesent euismod lorem <br> a purus placerat.</h2>
                         <hr class="mt-[21px] border-2 border-[#1F242E1A] w-[130px] mx-[30px] mb-[11px] group-hover:border-2 group-hover:border-[#2AB8DB]">
@@ -899,7 +960,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cursor-pointer group relative bg-[#FFFFFF] rounded-[10px] shadow-xl text-center">
+                    <div class="cursor-pointer group relative bg-[#FFFFFF] rounded-[10px] text-center">
                         <img class="w-[370px] h-[270px] rounded-[10px] transition-all duration-300" src="./assets/blog2.jpg" alt="blog2">
                         <h2 class="font-[600] text-[24px] leading-[34px] text-[##1F242E] text-left mt-[20px] mx-[30px]">Praesent euismod lorem <br> a purus placerat.</h2>
                         <hr class="mt-[21px] border-2 border-[#1F242E1A] w-[130px] mx-[30px] mb-[11px] group-hover:border-2 group-hover:border-[#2AB8DB]">
@@ -924,7 +985,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cursor-pointer group relative bg-[#FFFFFF] rounded-[10px] shadow-xl text-center">
+                    <div class="cursor-pointer group relative bg-[#FFFFFF] rounded-[10px] text-center">
                         <img class="w-[370px] h-[270px] rounded-[10px] transition-all duration-300" src="./assets/blog3.jpg" alt="blog3">
                         <h2 class="font-[600] text-[24px] leading-[34px] text-[##1F242E] text-left mt-[20px] mx-[30px]">Praesent euismod lorem <br> a purus placerat.</h2>
                         <hr class="mt-[21px] border-2 border-[#1F242E1A] w-[130px] mx-[30px] mb-[11px] group-hover:border-2 group-hover:border-[#2AB8DB]">
@@ -954,8 +1015,8 @@
         </div>
 
         <!-- company name section -->
-        <marquee class="pb-[120px] container flex-col lg:flex-row flex justify-center items-center cursor-pointer" marquee="scroll" direction="left" duration="2000" onmouseover="this.stop()" onmouseout="this.start()">
-            <div class="flex justify-center items-center gap-[100px] mt-[120px] bg-[#1F242E08] rounded-[20px] px-4 py-4">
+        <marquee class="pb-[120px] container bg-[#1F242E08] flex-col lg:flex-row flex justify-center items-center cursor-pointer" marquee="scroll" direction="left" duration="2000" onmouseover="this.stop()" onmouseout="this.start()">
+            <div class="flex justify-center items-center gap-[100px] mt-[120px] rounded-[20px] px-4 py-4">
                 <img src="./assets/Google_2015_logo.png" alt="google">
                 <img src="./assets/amazon.png" alt="amazon">
                 <img src="./assets/LinkedIn_Logo 1.png" alt="linkedIn">
@@ -967,7 +1028,7 @@
     </main>
 
     <!-- footer section -->
-    <footer class="">
+    <footer>
         <!-- footer top -->
         <div class="bg-[#1F242E] text-[#FFFFFF] flex gap-15 lg:gap-0 flex-col lg:flex-row justify-start items-start lg:justify-center lg:items-center">
             <div class="flex flex-col lg:mt-[115px] mt-[64px] mb-[15px] lg:mb-[155px] ml-5 lg:ml-0">
@@ -1048,6 +1109,7 @@
     </footer> 
 
 
+    <!-- for video popup -->
     <script>
         $(document).ready(function() {
             $('.video-popup').magnificPopup({
@@ -1070,7 +1132,7 @@
         });
     </script>
 
-
+    <!-- for slider -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.my-director-slider', {
@@ -1084,6 +1146,7 @@
         });
     </script>
 
+    <!-- for progress bar -->
     <script>
         $(document).ready(function () {
         let animated = false;
@@ -1108,6 +1171,40 @@
         $(window).on('scroll', checkVisibility);
         checkVisibility(); // run once on load
     });
+    </script>
+
+    <!-- mobile navbar menu -->
+    <script>
+        // getting all the HTML
+        const drawer = document.getElementById("drawer"); 
+        const overlay = document.getElementById("overlay"); 
+        const hamburger = document.getElementById("hamburger"); 
+        const crossIcon = document.getElementById("crossIcon"); 
+
+        const mobilePageNav = document.getElementById("mobilePageNav"); 
+        const mobilePageNavMenu = document.getElementById("mobilePageNavMenu");
+        
+        // console.log(drawer, overlay, hamburger, crossIcon, mobilePageNav, mobilePageNavMenu);
+
+        hamburger.addEventListener("click", function(){
+            drawer.classList.remove("-translate-x-full");
+            overlay.classList.remove("hidden");
+        })
+
+        crossIcon.addEventListener("click", function(){
+            drawer.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        })
+
+        overlay.addEventListener("click", function() {
+            drawer.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+        })
+
+        mobilePageNav.addEventListener("click", function() {
+            mobilePageNavMenu.classList.toggle("hidden");
+        })
+
     </script>
 
 </body>
